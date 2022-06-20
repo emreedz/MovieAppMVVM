@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/filmlerFragment"
-        android:name="com.example.movieapp.FilmlerFragment"
+        android:name="com.example.movieapp.Fragment.FilmlerFragment"
         android:label="fragment_filmler"
         tools:layout="@layout/fragment_filmler" />
     <fragment
         android:id="@+id/topRatedFilm"
-        android:name="com.example.movieapp.TopRatedFilm"
+        android:name="com.example.movieapp.Fragment.TopRatedFilm"
         android:label="fragment_top_rated_film"
         tools:layout="@layout/fragment_top_rated_film" />
     <fragment
         android:id="@+id/latestFilm"
-        android:name="com.example.movieapp.LatestFilm"
+        android:name="com.example.movieapp.Fragment.LatestFilm"
         android:label="fragment_latest_film"
         tools:layout="@layout/fragment_latest_film" />
     <fragment
         android:id="@+id/favoritesFilm"
-        android:name="com.example.movieapp.FavoritesFilm"
+        android:name="com.example.movieapp.Fragment.FavoritesFilm"
         android:label="fragment_favorites_film"
         tools:layout="@layout/fragment_favorites_film" />
 </navigation>

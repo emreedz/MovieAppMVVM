@@ -1,4 +1,4 @@
-package com.example.movieapp;
+package com.example.movieapp.Fragment;
 
 import android.os.Bundle;
 
@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.movieapp.R;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link FavoritesFilm#newInstance} factory method to
+ * Use the {@link TopRatedFilm#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FavoritesFilm extends Fragment {
+public class TopRatedFilm extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +26,7 @@ public class FavoritesFilm extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public FavoritesFilm() {
+    public TopRatedFilm() {
         // Required empty public constructor
     }
 
@@ -34,11 +36,11 @@ public class FavoritesFilm extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FavoritesFilm.
+     * @return A new instance of fragment TopRatedFilm.
      */
     // TODO: Rename and change types and number of parameters
-    public static FavoritesFilm newInstance(String param1, String param2) {
-        FavoritesFilm fragment = new FavoritesFilm();
+    public static TopRatedFilm newInstance(String param1, String param2) {
+        TopRatedFilm fragment = new TopRatedFilm();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +61,6 @@ public class FavoritesFilm extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_favorites_film, container, false);
+        return inflater.inflate(R.layout.fragment_top_rated_film, container, false);
     }
 }
