@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Filmler"
+        android:icon="@drawable/filmler_icon"
+        android:id="@+id/filmlerFragment">
+    </item>
+
+    <item android:title="En İyiler"
+        android:icon="@drawable/eniyiler_icon"
+        android:id="@+id/topRatedFilm">
+    </item>
+
+    <item android:title="En Yeniler"
+        android:icon="@drawable/yeniler_icon"
+        android:id="@+id/latestFilm">
+    </item>
+
+    <item android:title="Favoriler"
+        android:icon="@drawable/favorites_icon"
+        android:id="@+id/favoritesFilm">
+    </item>
+
+</menu>
