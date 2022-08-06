@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
 
@@ -35,7 +36,7 @@ public class FilmlerFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        filmlerViewModel = ViewModelProviders.of(this).get(FilmlerViewModel.class);
+        filmlerViewModel = new ViewModelProvider(this).get(FilmlerViewModel.class);
     }
 
     @Override
@@ -43,13 +44,9 @@ public class FilmlerFragment extends Fragment {
                              Bundle savedInstanceState) {
         binding = FragmentFilmlerBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
-
         binding.rvFilmler.setLayoutManager(new GridLayoutManager(getContext(), 2));
         adapter = new FilmlerCardAdapter(this, filmlerResponseListe);
         binding.rvFilmler.setAdapter(adapter);
-
-//        RecyclerView recyclerView = view.findViewById(R.id.rvFilmler);
-//        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
         return view;
     }
@@ -57,7 +54,6 @@ public class FilmlerFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        filmlerViewModel.ApiCall();
         observerFilm();
     }
 
@@ -66,11 +62,11 @@ public class FilmlerFragment extends Fragment {
             @Override
             public void onChanged(List<FilmlerResponse> filmlerResponses) {
                 if (filmlerResponses != null) {
-                    Glide.with(FilmlerFragment.this)
-                            .load(filmlerResponses);
+                    adapter.setFilmler(filmlerResponses);
                 }
             }
         });
+        filmlerViewModel.getFilmlerListe();
     }
 
 

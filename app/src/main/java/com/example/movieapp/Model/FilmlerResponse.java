@@ -1,77 +1,76 @@
 package com.example.movieapp.Model;
 
+
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class FilmlerResponse {
-    @SerializedName("adult")
+public class FilmlerResponse {@SerializedName("id")
+@Expose
+private Integer id;
+    @SerializedName("url")
     @Expose
-    private Boolean adult;
-    @SerializedName("backdrop_path")
+    private String url;
+    @SerializedName("name")
     @Expose
-    private String backdropPath;
-    @SerializedName("genre_ids")
+    private String name;
+//    @SerializedName("type")
+//    @Expose
+//    private String type;
+//    @SerializedName("language")
+//    @Expose
+//    private String language;
+//    @SerializedName("genres")
+//    @Expose
+//    private List<String> genres = null;
+//    @SerializedName("status")
+//    @Expose
+//    private String status;
+//    @SerializedName("runtime")
+//    @Expose
+//    private Integer runtime;
+//    @SerializedName("averageRuntime")
+//    @Expose
+//    private Integer averageRuntime;
+//    @SerializedName("premiered")
+//    @Expose
+//    private String premiered;
+//    @SerializedName("ended")
+//    @Expose
+//    private String ended;
+//    @SerializedName("officialSite")
+//    @Expose
+//    private String officialSite;
+//    @SerializedName("rating")
+//    @Expose
+//    private Rating rating;
+//    @SerializedName("weight")
+//    @Expose
+//    private Integer weight;
+//    @SerializedName("network")
+//    @Expose
+//    private Network network;
+//    @SerializedName("webChannel")
+//    @Expose
+//    private Object webChannel;
+//    @SerializedName("dvdCountry")
+//    @Expose
+//    private Object dvdCountry;
+//    @SerializedName("externals")
+//    @Expose
+//    private Externals externals;
+    @SerializedName("image")
     @Expose
-    private List<Integer> genreIds = null;
-    @SerializedName("id")
-    @Expose
-    private Integer id;
-    @SerializedName("original_language")
-    @Expose
-    private String originalLanguage;
-    @SerializedName("original_title")
-    @Expose
-    private String originalTitle;
-    @SerializedName("overview")
-    @Expose
-    private String overview;
-    @SerializedName("popularity")
-    @Expose
-    private Double popularity;
-    @SerializedName("poster_path")
-    @Expose
-    private String posterPath;
-    @SerializedName("release_date")
-    @Expose
-    private String releaseDate;
-    @SerializedName("title")
-    @Expose
-    private String title;
-    @SerializedName("video")
-    @Expose
-    private Boolean video;
-    @SerializedName("vote_average")
-    @Expose
-    private Double voteAverage;
-    @SerializedName("vote_count")
-    @Expose
-    private Integer voteCount;
+    private Image image;
+//    @SerializedName("summary")
+//    @Expose
+//    private String summary;
 
-    public Boolean getAdult() {
-        return adult;
-    }
-
-    public void setAdult(Boolean adult) {
-        this.adult = adult;
-    }
-
-    public String getBackdropPath() {
-        return backdropPath;
-    }
-
-    public void setBackdropPath(String backdropPath) {
-        this.backdropPath = backdropPath;
-    }
-
-    public List<Integer> getGenreIds() {
-        return genreIds;
-    }
-
-    public void setGenreIds(List<Integer> genreIds) {
-        this.genreIds = genreIds;
-    }
+//    @SerializedName("_links")
+//    @Expose
+//    private Links links;
 
     public Integer getId() {
         return id;
@@ -81,83 +80,180 @@ public class FilmlerResponse {
         this.id = id;
     }
 
-    public String getOriginalLanguage() {
-        return originalLanguage;
+    public String getUrl() {
+        return url;
     }
 
-    public void setOriginalLanguage(String originalLanguage) {
-        this.originalLanguage = originalLanguage;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    public String getOriginalTitle() {
-        return originalTitle;
+    public String getName() {
+        return name;
     }
 
-    public void setOriginalTitle(String originalTitle) {
-        this.originalTitle = originalTitle;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getOverview() {
-        return overview;
+//    public String getType() {
+//        return type;
+//    }
+//
+//    public void setType(String type) {
+//        this.type = type;
+//    }
+//
+//    public String getLanguage() {
+//        return language;
+//    }
+//
+//    public void setLanguage(String language) {
+//        this.language = language;
+//    }
+//
+//    public List<String> getGenres() {
+//        return genres;
+//    }
+//
+//    public void setGenres(List<String> genres) {
+//        this.genres = genres;
+//    }
+//
+//    public String getStatus() {
+//        return status;
+//    }
+//
+//    public void setStatus(String status) {
+//        this.status = status;
+//    }
+//
+//    public Integer getRuntime() {
+//        return runtime;
+//    }
+//
+//    public void setRuntime(Integer runtime) {
+//        this.runtime = runtime;
+//    }
+//
+//    public Integer getAverageRuntime() {
+//        return averageRuntime;
+//    }
+//
+//    public void setAverageRuntime(Integer averageRuntime) {
+//        this.averageRuntime = averageRuntime;
+//    }
+//
+//    public String getPremiered() {
+//        return premiered;
+//    }
+//
+//    public void setPremiered(String premiered) {
+//        this.premiered = premiered;
+//    }
+//
+//    public String getEnded() {
+//        return ended;
+//    }
+//
+//    public void setEnded(String ended) {
+//        this.ended = ended;
+//    }
+//
+//    public String getOfficialSite() {
+//        return officialSite;
+//    }
+//
+//    public void setOfficialSite(String officialSite) {
+//        this.officialSite = officialSite;
+//    }
+//
+//    public Schedule getSchedule() {
+//        return schedule;
+//    }
+//
+//    public void setSchedule(Schedule schedule) {
+//        this.schedule = schedule;
+//    }
+//
+//    public Rating getRating() {
+//        return rating;
+//    }
+//
+//    public void setRating(Rating rating) {
+//        this.rating = rating;
+//    }
+//
+//    public Integer getWeight() {
+//        return weight;
+//    }
+//
+//    public void setWeight(Integer weight) {
+//        this.weight = weight;
+//    }
+//
+//    public Network getNetwork() {
+//        return network;
+//    }
+//
+//    public void setNetwork(Network network) {
+//        this.network = network;
+//    }
+//
+//    public Object getWebChannel() {
+//        return webChannel;
+//    }
+//
+//    public void setWebChannel(Object webChannel) {
+//        this.webChannel = webChannel;
+//    }
+//
+//    public Object getDvdCountry() {
+//        return dvdCountry;
+//    }
+//
+//    public void setDvdCountry(Object dvdCountry) {
+//        this.dvdCountry = dvdCountry;
+//    }
+//
+//    public Externals getExternals() {
+//        return externals;
+//    }
+//
+//    public void setExternals(Externals externals) {
+//        this.externals = externals;
+//    }
+
+    public Image getImage() {
+        return image;
     }
 
-    public void setOverview(String overview) {
-        this.overview = overview;
+    public void setImage(Image image) {
+        this.image = image;
     }
 
-    public Double getPopularity() {
-        return popularity;
-    }
+//    public String getSummary() {
+//        return summary;
+//    }
+//
+//    public void setSummary(String summary) {
+//        this.summary = summary;
+//    }
+//
+//    public Integer getUpdated() {
+//        return updated;
+//    }
+//
+//    public void setUpdated(Integer updated) {
+//        this.updated = updated;
+//    }
+//
+//    public Links getLinks() {
+//        return links;
+//    }
+//
+//    public void setLinks(Links links) {
+//        this.links = links;
+//    }
 
-    public void setPopularity(Double popularity) {
-        this.popularity = popularity;
-    }
-
-    public String getPosterPath() {
-        return posterPath;
-    }
-
-    public void setPosterPath(String posterPath) {
-        this.posterPath = posterPath;
-    }
-
-    public String getReleaseDate() {
-        return releaseDate;
-    }
-
-    public void setReleaseDate(String releaseDate) {
-        this.releaseDate = releaseDate;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public Boolean getVideo() {
-        return video;
-    }
-
-    public void setVideo(Boolean video) {
-        this.video = video;
-    }
-
-    public Double getVoteAverage() {
-        return voteAverage;
-    }
-
-    public void setVoteAverage(Double voteAverage) {
-        this.voteAverage = voteAverage;
-    }
-
-    public Integer getVoteCount() {
-        return voteCount;
-    }
-
-    public void setVoteCount(Integer voteCount) {
-        this.voteCount = voteCount;
-    }
 }

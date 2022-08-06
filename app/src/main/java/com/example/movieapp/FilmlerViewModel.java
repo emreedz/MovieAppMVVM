@@ -22,10 +22,11 @@ public class FilmlerViewModel extends ViewModel {
 
     public MutableLiveData<List<FilmlerResponse>> getFilmlerListeObserver() {
         return filmlerListe;
+
     }
 
 
-    public void ApiCall() {
+    public void getFilmlerListe() {
         Call<List<FilmlerResponse>> call = RetrofitClient.getFilmler().filmlerCall();
         call.enqueue(new Callback<List<FilmlerResponse>>() {
             @Override
